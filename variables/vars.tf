@@ -43,7 +43,9 @@
 #variable from tfvars
 variable "y" {
   description = "Sample number variable"
+  type        = number
 }
+
 output "y" {
   value = var.y
 }
