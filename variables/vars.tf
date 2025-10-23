@@ -1,10 +1,10 @@
-variable "x" {
-  default = 10
-}
-
-output "x" {
-  value = var.x
-}
+# variable "x" {
+#   default = 10
+# }
+#
+# output "x" {
+#   value = var.x
+# }
 
 #list variable
 variable "l" {
@@ -16,5 +16,5 @@ variable "l" {
 }
 
 output "l" {
-  value = var.l
+  value = var.1
 }
