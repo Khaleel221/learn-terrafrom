@@ -41,7 +41,9 @@
 #   value = var.l["course"]
 # }
 #variable from tfvars
-variable "y" {}
+variable "y" {
+  description = "Sample number variable"
+}
 output "y" {
   value = var.y
 }
