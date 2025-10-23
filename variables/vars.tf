@@ -29,14 +29,14 @@
 # output "l" {
 #   value = var.l[1]
 # }
-#variable from map variable
+#map variable
 variable "l" {
-  default = [
-    course = "DevOps"
+  default = {
+    course  = "DevOps"
     trainer = "john"
-  ]
+  }
 }
+
 output "course_name" {
   value = var.l["course"]
 }
-execute
