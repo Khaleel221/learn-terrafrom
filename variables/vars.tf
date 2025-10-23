@@ -30,13 +30,18 @@
 #   value = var.l[1]
 # }
 #map variable
-variable "l" {
-  default = {
-    course  = "DevOps"
-    trainer = "john"
-  }
-}
-
-output "course_name" {
-  value = var.l["course"]
+# variable "l" {
+#   default = {
+#     course  = "DevOps"
+#     trainer = "john"
+#   }
+# }
+#
+# output "course_name" {
+#   value = var.l["course"]
+# }
+#variable from tfvars
+variable "y" {}
+output "y" {
+  value = var.y
 }
