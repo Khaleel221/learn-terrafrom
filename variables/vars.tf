@@ -19,13 +19,24 @@
 #   value = var.l
 # }
 #second value in list
+# variable "l" {
+#   default = [
+#     10,
+#     "hello",
+#     true
+#   ]
+# }
+# output "l" {
+#   value = var.l[1]
+# }
+#variable from map variable
 variable "l" {
   default = [
-    10,
-    "hello",
-    true
+    course = "DevOps"
+    trainer = "john"
   ]
 }
-output "l" {
-  value = var.l[1]
+output "course_name" {
+  value = var.l["course"]
 }
+execute
