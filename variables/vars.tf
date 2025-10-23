@@ -16,5 +16,5 @@ variable "l" {
 }
 
 output "l" {
-  value = var.1
+  value = var.l
 }
