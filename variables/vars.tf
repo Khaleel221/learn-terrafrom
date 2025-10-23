@@ -7,6 +7,18 @@
 # }
 
 #list variable
+# variable "l" {
+#   default = [
+#     10,
+#     "hello",
+#     true
+#   ]
+# }
+
+# output "l" {
+#   value = var.l
+# }
+#second value in list
 variable "l" {
   default = [
     10,
@@ -14,7 +26,6 @@ variable "l" {
     true
   ]
 }
-
 output "l" {
-  value = var.l
+  value = var.l[1]
 }
