@@ -1,9 +1,9 @@
 variable "fruits"{}
 
 output "apple" {
-  value = "apple qty - ${var.fruits["apple"]["qty"]}, price is - ${var.fruits["apple"]["price"]}"
+  value = "apple qty - ${lookup(var.fruits["apple"]), "qty", 0]}, price is - ${lookup(var.fruits["apple"]), "price", 0.5]}"
 }
 
 output "banana" {
-  value = "banana qty - ${var.fruits["banana"]["qty"]}, price is - ${var.fruits["banana"]["price"]}"
+  value = "banana qty - ${lookup(var.fruits["banana"]), "qty", 0]}, price is - ${lookup(var.fruits["banana"]), "price", 0.5]}"
 }
