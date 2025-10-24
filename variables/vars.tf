@@ -41,11 +41,16 @@
 #   value = var.l["course"]
 # }
 #variable from tfvars
-variable "y" {
-  description = "Sample number variable"
-  type        = number
-}
-
-output "y" {
-  value = var.y
+# variable "y" {
+#   description = "Sample number variable"
+#   type        = number
+# }
+#
+# output "y" {
+#   value = var.y
+# }
+#variable from auto.tfvar
+variable "url" {}
+output "url" {
+  value = var.url
 }
