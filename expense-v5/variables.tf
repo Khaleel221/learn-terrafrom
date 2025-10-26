@@ -12,13 +12,13 @@ variable "components" {
   }
 }
 
-# variable "ami" {
-#   default = "ami-09c813fb71547fc4f"
-# }
-#
-# variable "vpc_security_group_ids" {
-#   default = ["sg-0618928820c39d1c2"]
-# }
-# variable "zone_id" {
-#   default = "Z00160522RYM7CTVTMLCE"
-# }
+variable "ami" {
+  default = "ami-09c813fb71547fc4f"
+}
+
+variable "vpc_security_group_ids" {
+  default = ["sg-0618928820c39d1c2"]
+}
+variable "zone_id" {
+  default = "Z00160522RYM7CTVTMLCE"
+}
