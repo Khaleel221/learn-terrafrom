@@ -1,6 +1,6 @@
 data "aws_route53_zone" "main" {
   name         = "khaleel221.shop"
-  private_zone = true
+  private_zone = false
 }
 
 data "aws_security_group" "allow-all" {
