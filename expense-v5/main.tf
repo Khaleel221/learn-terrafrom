@@ -1,11 +1,9 @@
-resource "aws_instance" "ec2-nodes" {
-  for_each      = var.components
-  ami           = "ami-09c813fb71547fc4f"
-  instance_type = each.value["instance_type"]
-  vpc_security_group_ids = ["sg-0618928820c39d1c2"]
+module "app" {
+  for_each = var.components
+  source    = "./app-module"
 
-  tags = {
-    Name = each.key
-  }
+  ami                    = var.ami
+  instance_type          = each.value["instance_type"]
+  name                   = each.key
+  vpc_security_group_ids = var.vpc_security_group_ids
 }
-
