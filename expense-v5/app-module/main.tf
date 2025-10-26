@@ -4,6 +4,6 @@ resource "aws_instance" "ec2-nodes" {
   vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
-    Name = each.key
+    Name = var.name
   }
 }
