@@ -2,6 +2,9 @@ data "aws_route53_zone" "main" {
   name         = "khaleel221.shop"
   private_zone = true
 }
+output "test" {
+  value = "aws_route53_zone.main"
+}
 data "aws_security_group" "allow-all" {
   filter {
     name   = "group-name"
