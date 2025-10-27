@@ -18,3 +18,19 @@ resource "aws_route53_record" "record" {
 
   depends_on = [aws_instance.node] # ensures EC2 is created first
 }
+resource "null_resource" "provisioner" {
+  depends_on = [aws_route53_record.record]
+
+  provisioner "local-exec" {
+    command = <<EOT
+      sleep 120;
+      cd /home/ec2-user/Expense-Ansible/;
+      ansible-playbook -i ${aws_instance.node.private_ip}, \
+        -e ansible_user=ec2-user \
+        -e ansible_password=DevOps321 \
+        -e role_name=${var.name} \
+        -e env=dev \
+        expense.yml
+    EOT
+  }
+}
